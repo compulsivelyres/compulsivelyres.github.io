@@ -1,0 +1,76 @@
+#inner {
+	background-color: rgba(16, 98, 153, 0.95);
+	color: white;
+	height: 100vh;
+	padding-top: 2em;
+}
+#about_content {
+	height: 100vh;
+	color: rgb(16, 98, 153);
+}
+#main-title {
+	font-family: 'Playball', cursive;
+	font-size: 70px;
+	text-align: center;
+	text-shadow: 2px 2px rgba(0,0,0,0.75);
+	margin-bottom: 0;
+}
+#subtitle {
+	font-family: 'Playball', cursive;
+	font-size: 35px;
+	text-align: center;
+	text-shadow: 2px 2px rgba(0,0,0,0.75);
+	margin-top: 10px;
+}
+.construction {
+	font-family: 'Raleway';
+	font-size: 25px;
+	text-align: center;
+	text-shadow: 1px 1px rgba(0,0,0,0.75);
+}
+
+#construction-top {
+	margin-top: 2em;
+}
+
+#envelope-container {
+	margin-top: 1em;
+}
+
+#envelope {
+	text-align: center;
+	font-size: 5em;
+}
+
+#envelope:link, #envelope:visited {
+	text-decoration: none;
+	color: white;
+}
+#envelope:hover {
+	cursor: pointer;
+	text-decoration: none;
+	color:#9d9d9d;
+}
+#envelope:active {
+	text-decoration: none;
+	color: white;
+}
+
+@media (min-width: 768px) { /* For anything larger than mobile */
+	#main-title {
+		font-size: 100px;
+	}
+	#subtitle {
+		font-size: 50px;
+		margin-top: 0;
+	}
+	.construction {
+		font-size: 35px;
+	}
+	#construction-top {
+		margin-top: 1em;
+	}
+	#inner {
+		padding-top: 5em;
+	}
+}
