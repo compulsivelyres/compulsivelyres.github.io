@@ -10,7 +10,7 @@
 }
 #main-title {
 	font-family: 'Playball', cursive;
-	font-size: 70px;
+	font-size: 65px;
 	text-align: center;
 	text-shadow: 2px 2px rgba(0,0,0,0.75);
 	margin-bottom: 0;
@@ -30,7 +30,7 @@
 }
 
 #construction-top {
-	margin-top: 2em;
+	margin-top: 1em;
 }
 
 #envelope-container {
@@ -66,9 +66,6 @@
 	}
 	.construction {
 		font-size: 35px;
-	}
-	#construction-top {
-		margin-top: 1em;
 	}
 	#inner {
 		padding-top: 5em;
