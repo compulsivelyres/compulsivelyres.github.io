@@ -2,7 +2,6 @@
 	background-color: rgba(16, 98, 153, 0.95);
 	color: white;
 	height: 100vh;
-	padding-top: 2em;
 }
 #about_content {
 	height: 100vh;
@@ -34,12 +33,12 @@
 }
 
 #envelope-container {
-	margin-top: 1em;
+	margin-top: 0;
 }
 
 #envelope {
 	text-align: center;
-	font-size: 5em;
+	font-size: 4em;
 }
 
 #envelope:link, #envelope:visited {
