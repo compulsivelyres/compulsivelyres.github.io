@@ -1,12 +1,14 @@
-#inner {
+#body {
 	background-color: rgba(16, 98, 153, 0.95);
 	color: white;
 	height: 100vh;
 }
+
 #about_content {
 	height: 100vh;
 	color: rgb(16, 98, 153);
 }
+
 #main-title {
 	font-family: 'Playball', cursive;
 	font-size: 65px;
@@ -55,6 +57,11 @@
 	color: white;
 }
 
+#player {
+	width: 300px;
+	height: 150px;
+}
+
 @media (min-width: 768px) { /* For anything larger than mobile */
 	#main-title {
 		font-size: 100px;
@@ -68,5 +75,9 @@
 	}
 	#inner {
 		padding-top: 5em;
+	}
+	#player {
+		width: 560px;
+		height: 315px;
 	}
 }
