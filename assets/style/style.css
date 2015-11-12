@@ -99,7 +99,7 @@
 }
 
 #construction-top {
-	margin-top: .25em;
+	margin-top: .5em;
 }
 
 #envelope-container {
@@ -143,9 +143,6 @@
 	}
 	.construction {
 		font-size: 35px;
-	}
-	#construction-top {
-		margin-top: .5em;
 	}
 	#inner {
 		padding: 0;
