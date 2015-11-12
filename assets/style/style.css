@@ -96,6 +96,11 @@
 	text-align: center;
 }
 
+.member-break {
+	width: 85%;
+	background-color: rgba(0,0,0,0.35)
+}
+
 /* Footer */
 
 .construction {
@@ -181,6 +186,9 @@
 	}
 	.member-description {
 		display: block;
+	}
+	.member-break {
+		background-color: rgba(0,0,0,0.3);
 	}
 }
 
