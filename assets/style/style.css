@@ -55,7 +55,7 @@
 /* Member */
 
 #member-container {
-	background-color: rgb(246,246,246);
+	background-color: white;
 	text-align: center;
 	color: rgb(16, 98, 153);
 	height: auto;
@@ -73,7 +73,7 @@
 	height: 8em;
 	margin: .5em;
 	border-radius: 7px;
-	box-shadow: .75px .5px .75px rgba(0,0,0,0.5); 
+	box-shadow: 1px 1px .75px rgba(0,0,0,0.5); 
 }
 
 .member-name {
