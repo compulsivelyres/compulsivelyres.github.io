@@ -1,7 +1,23 @@
 #body {
+	background-color: rgb(255,255,255);
+	color: rgb(255,255,255);
+}
+
+#inner {
+	padding: 0;
+}
+
+#title-container {
 	background-color: rgba(16, 98, 153, 0.95);
-	color: white;
+	padding: 0;
 	height: 100vh;
+	box-shadow: 0px 1px .5px rgba(0,0,0,0.75); 	
+}
+
+#subtitle-container {
+	background-color: rgba(16, 98, 153, 0.95);
+	padding: 0;
+	height: 30vh;
 }
 
 #about_content {
@@ -53,9 +69,52 @@
 	color: white;
 }
 
+/* Member */
+
+#member-container {
+	background-color: rgb(246,246,246);
+	text-align: center;
+	color: rgb(16, 98, 153);
+	height: auto;
+	box-shadow: 0px 1px .5px rgba(0,0,0,0.75); 
+}
+
+#meet {
+	font-family: 'Playball', cursive;
+	font-size: 40px;
+	text-shadow: .75px .75px rgba(0,0,0,0.75); 
+}
+
+.member-icons {
+	width: 8em;
+	height: 8em;
+	margin: .5em;
+}
+
+.member-name {
+	font-family: 'Playball', cursive;
+	font-size: 2em;
+	text-shadow: .5px .5px rgba(0,0,0,0.75);
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.member-description {
+	font-family: 'Raleway';
+	text-shadow: .5px .5px rgba(0,0,0,0.75);
+	color: black;
+	font-size: 1.5em;
+	display: none;
+}
+
+.member-major {
+	text-align: center;
+}
+
 #player {
 	width: 300px;
 	height: 150px;
+	margin-top: 1.5em;
 }
 
 .contact-icons {
@@ -69,9 +128,15 @@
 	#main-title {
 		font-size: 100px;
 	}
+	#title-container {
+		height: 107vh;
+	}
 	#subtitle {
 		font-size: 50px;
 		margin-top: 0;
+	}
+	#subtitle-container {
+		height: 35vh;
 	}
 	.construction {
 		font-size: 35px;
@@ -80,14 +145,34 @@
 		margin-top: .5em;
 	}
 	#inner {
-		padding-top: 1em;
+		padding: 0;
 	}
 	#player {
 		width: 560px;
 		height: 315px;
+		margin-bottom: 1em;
 	}
 	.contact-icons {
 		font-size: 5em;
+	}
+	#meet {
+		font-size: 50px;
+		text-shadow: 1px 1px rgba(0,0,0,0.75);
+	}
+	.member-icons {
+		width: 12em;
+		height: 12em;
+		margin: 1em 2em;
+	}
+	.member-name {
+		font-size: 3em;
+		text-align: inherit;
+	}
+	.member-major {
+		text-align: inherit;
+	}
+	.member-description {
+		display: block;
 	}
 }
 
@@ -100,21 +185,30 @@
 		margin-top: 0;
 		margin-bottom: .25em;
 	}
+	#meet {
+		font-size: 75px;
+	}
 	.construction {
 		font-size: 45px;
 	}
 	#inner {
-		padding-top: 1em;
+		padding:0;
 	}
 	#player {
 		width: 675px;
 		height: 333px;
-		margin-bottom: .35em;
+		margin-bottom: 1em;
 	}
 	.contact-icons {
 		font-size: 6em;
 	}
+	.member-icons {
+		width: 12em;
+		height: 12em;
+		margin: 1em 2em;
+	}
 }
+
 /* Icomoon stuff */
 
 @font-face {
