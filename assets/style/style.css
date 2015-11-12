@@ -28,8 +28,24 @@
 	font-family: 'Playball', cursive;
 	font-size: 65px;
 	text-align: center;
-	text-shadow: 2px 2px rgba(0,0,0,0.75);
+	text-shadow: 1.5px 1.5px rgba(0,0,0,0.75);
 	margin-bottom: 0;
+}
+
+#subtitle-container {
+	display: table-cell;
+	vertical-align: middle;
+	background-color: rgba(16, 98, 153, 0.95);
+	padding: 0;
+	height: 30vh;
+}
+
+#subtitle {
+	font-family: 'Playball', cursive;
+	font-size: 35px;
+	text-align: center;
+	text-shadow: 1.5px 1.5px rgba(0,0,0,0.75);
+	margin-top: 10px;
 }
 
 #player {
@@ -82,22 +98,6 @@
 }
 
 /* Footer */
-
-#subtitle-container {
-	display: table-cell;
-	vertical-align: middle;
-	background-color: rgba(16, 98, 153, 0.95);
-	padding: 0;
-	height: 30vh;
-}
-
-#subtitle {
-	font-family: 'Playball', cursive;
-	font-size: 35px;
-	text-align: center;
-	text-shadow: 2px 2px rgba(0,0,0,0.75);
-	margin-top: 10px;
-}
 
 .construction {
 	font-family: 'Raleway';
