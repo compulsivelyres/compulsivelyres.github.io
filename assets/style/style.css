@@ -1,6 +1,5 @@
 #body {
-	background-color: rgb(255,255,255);
-	color: rgb(255,255,255);
+	color: white;
 }
 
 #inner {
@@ -169,7 +168,6 @@
 	.member-icons {
 		width: 12em;
 		height: 12em;
-		margin: 1em 2em;
 	}
 	.member-name {
 		font-size: 3em;
@@ -209,9 +207,8 @@
 		font-size: 6em;
 	}
 	.member-icons {
-		width: 13em;
-		height: 13em;
-		margin: 1em 1em;
+		width: 14em;
+		height: 14em;
 	}
 }
 
