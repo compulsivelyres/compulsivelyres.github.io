@@ -7,22 +7,13 @@
 	padding: 0;
 }
 
+/* Main Title */
+
 #title-container {
 	background-color: rgba(16, 98, 153, 0.95);
 	padding: 0;
 	height: 100vh;
 	box-shadow: 0px 1px .5px rgba(0,0,0,0.75); 	
-}
-
-#subtitle-container {
-	background-color: rgba(16, 98, 153, 0.95);
-	padding: 0;
-	height: 30vh;
-}
-
-#about_content {
-	height: 100vh;
-	color: rgb(16, 98, 153);
 }
 
 #main-title {
@@ -32,6 +23,65 @@
 	text-shadow: 2px 2px rgba(0,0,0,0.75);
 	margin-bottom: 0;
 }
+
+#player {
+	width: 300px;
+	height: 150px;
+	margin-top: 1.5em;
+}
+
+/* Member */
+
+#member-container {
+	background-color: rgb(246,246,246);
+	text-align: center;
+	color: rgb(16, 98, 153);
+	height: auto;
+	box-shadow: 0px 1px .5px rgba(0,0,0,0.75); 
+}
+
+#meet {
+	font-family: 'Playball', cursive;
+	font-size: 40px;
+	text-shadow: .75px .75px rgba(0,0,0,0.75); 
+}
+
+.member-icons {
+	width: 8em;
+	height: 8em;
+	margin: .5em;
+	border-radius: 7px;
+	box-shadow: .75px .5px .75px rgba(0,0,0,0.5); 
+}
+
+.member-name {
+	font-family: 'Playball', cursive;
+	font-size: 2em;
+	text-shadow: .5px .5px rgba(0,0,0,0.75);
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.member-description {
+	font-family: 'Raleway';
+	text-shadow: .5px .5px rgba(0,0,0,0.75);
+	color: black;
+	font-size: 1.5em;
+	display: none;
+}
+
+.member-major {
+	text-align: center;
+}
+
+/* Footer */
+
+#subtitle-container {
+	background-color: rgba(16, 98, 153, 0.95);
+	padding: 0;
+	height: 30vh;
+}
+
 #subtitle {
 	font-family: 'Playball', cursive;
 	font-size: 35px;
@@ -40,6 +90,7 @@
 	margin-top: 10px;
 	margin-bottom: .25em;
 }
+
 .construction {
 	font-family: 'Raleway';
 	font-size: 25px;
@@ -67,54 +118,6 @@
 .contact-icons:active {
 	text-decoration: none;
 	color: white;
-}
-
-/* Member */
-
-#member-container {
-	background-color: rgb(246,246,246);
-	text-align: center;
-	color: rgb(16, 98, 153);
-	height: auto;
-	box-shadow: 0px 1px .5px rgba(0,0,0,0.75); 
-}
-
-#meet {
-	font-family: 'Playball', cursive;
-	font-size: 40px;
-	text-shadow: .75px .75px rgba(0,0,0,0.75); 
-}
-
-.member-icons {
-	width: 8em;
-	height: 8em;
-	margin: .5em;
-}
-
-.member-name {
-	font-family: 'Playball', cursive;
-	font-size: 2em;
-	text-shadow: .5px .5px rgba(0,0,0,0.75);
-	margin-bottom: 0;
-	text-align: center;
-}
-
-.member-description {
-	font-family: 'Raleway';
-	text-shadow: .5px .5px rgba(0,0,0,0.75);
-	color: black;
-	font-size: 1.5em;
-	display: none;
-}
-
-.member-major {
-	text-align: center;
-}
-
-#player {
-	width: 300px;
-	height: 150px;
-	margin-top: 1.5em;
 }
 
 .contact-icons {
@@ -176,7 +179,7 @@
 	}
 }
 
-@media (min-width: 1200px) { /* For Small Screens, larger than Mobile */
+@media (min-width: 1200px) { /* For Large Screens, laptop/desktops */
 	#main-title {
 		font-size: 115px;
 	}
@@ -203,9 +206,9 @@
 		font-size: 6em;
 	}
 	.member-icons {
-		width: 12em;
-		height: 12em;
-		margin: 1em 2em;
+		width: 13em;
+		height: 13em;
+		margin: 1em 1em;
 	}
 }
 
