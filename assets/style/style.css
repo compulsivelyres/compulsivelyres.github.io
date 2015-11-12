@@ -35,7 +35,6 @@
 #player {
 	width: 300px;
 	height: 150px;
-	margin-top: 1.5em;
 }
 
 /* Member */
@@ -159,7 +158,6 @@
 	#player {
 		width: 560px;
 		height: 315px;
-		margin-bottom: 1em;
 	}
 	.contact-icons {
 		font-size: 5em;
@@ -206,7 +204,6 @@
 	#player {
 		width: 675px;
 		height: 333px;
-		margin-bottom: 1em;
 	}
 	.contact-icons {
 		font-size: 6em;
