@@ -192,7 +192,7 @@
 	}
 }
 
-@media (min-width: 1200px) { /* For Large Screens, laptop/desktops */
+@media (min-width: 992px) { /* For Large Screens, laptop/desktops */
 	#main-title {
 		font-size: 115px;
 	}
