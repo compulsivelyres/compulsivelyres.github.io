@@ -18,7 +18,7 @@
 	vertical-align: middle;
 	background-color: rgba(16, 98, 153, 0.95);
 	padding: 0;
-	height: 100vh;
+	height: 600px;
 	box-shadow: 0px 1px .5px rgba(0,0,0,0.75);
 	text-align: center;
 }
@@ -36,7 +36,7 @@
 	vertical-align: middle;
 	background-color: rgba(16, 98, 153, 0.95);
 	padding: 0;
-	height: 30vh;
+	height: 150px;
 }
 
 #subtitle {
@@ -50,6 +50,30 @@
 #player {
 	width: 300px;
 	height: 150px;
+}
+
+/* YouTube Container */
+
+#youtube-container {
+	margin: 0 auto;
+	color: rgb(16, 98, 153);
+	text-align: center;
+	font-family: 'Raleway';
+	font-size: 30px;
+	text-shadow: .5px .5px rgba(0,0,0,0.75);
+}
+
+/* News Container */
+
+#news-container {
+	margin: 0 auto;
+	height: 300px;
+	background-color: rgba(16, 98, 153, 0.95);
+	color: white;
+	font-size: 40px;
+	font-family: 'Playball', cursive;
+	text-shadow: .5px .5px rgba(0,0,0,0.75);
+	text-align: center;
 }
 
 /* Member */
@@ -144,14 +168,14 @@
 		font-size: 100px;
 	}
 	#title-container {
-		height: 105vh;
+		height: 600px;
 	}
 	#subtitle {
 		font-size: 50px;
 		margin-top: 0;
 	}
 	#subtitle-container {
-		height: 35vh;
+		height: 200px;
 	}
 	.construction {
 		font-size: 35px;
