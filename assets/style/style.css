@@ -258,6 +258,12 @@
 	}
 }
 
+@media (min-width: 1200px) {
+	#title-container {
+		height: 900px;
+	}
+}
+
 /* Icomoon stuff */
 
 @font-face {
