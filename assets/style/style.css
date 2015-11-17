@@ -163,6 +163,17 @@
 	color: white;
 }
 
+@media (min-width: 480px) {
+	#title-container {
+		height: 400px;
+	}
+	#player {
+
+		width: 430px;
+		height: 200px;
+	}
+}
+
 @media (min-width: 768px) { /* For Small Screens, larger than Mobile */
 	#main-title {
 		font-size: 100px;
