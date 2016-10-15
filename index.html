@@ -28,6 +28,8 @@
 	</script>
 	<script>
 		$(document).ready(function() {
+
+			/** Hide and Reveal audition info **/
 			$('#audition').click(function() {
 				if ($("#paragraph").css('display') == 'none') {
 					$('#paragraph').fadeIn();
@@ -35,8 +37,18 @@
 				else {
 					$('#paragraph').fadeOut();
 				}
-			})
-		})
+			});
+
+			/** Smooth Scroll from New Member page to Member Info **/
+			$('.newMembers').click(function() {
+				var name = $(this).attr('name');
+				$('html, body').animate({
+					scrollTop: $('#' + name).offset().top
+				}, 1500);
+				return false;
+			});
+
+		});
 	</script>
 </head>
 
@@ -50,36 +62,24 @@
 					<h1 id="main-title" class="col-xs-12">Compulsive Lyres</h1>
 					<h2 id="subtitle" class="col-xs-12">A Cappella</h2>
 					<div>
-						<iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/E6OgoSHsYW4?rel=0&amp;showinfo=0" frameborder="0" allowFullscreen></iframe>
+						<iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/E6OgoSHsYW4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
 
 			<div id="news-container" style="text-align: center;" class="container-fluid">
 				<div class='row' style='text-align: center;'>
-					<h1 id='meet' style=" font-family: 'Farsan'" class='col-xs-12'>Upcoming Events</h1>
+					<h1 id='meet' style=" font-family: 'Farsan'" class='col-xs-12'>Welcome Our Newest Members!</h1>
 					<hr class='member-break'/>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
-						<h3 id='meet' class="member-name" style="margin-top: 0;font-family:'Farsan'"> Join the Compulsive Lyres! </h3>
-						<hr style="visibility: hidden;">
-					</div>
-					<div class="col-xs-12">
-						<h3 class="member-major" style='margin-top: 0;'>
-							4:30pm-12am | Sept 15<sup>th</sup>-16<sup>th</sup> | Crofoot Room, Michigan Union
-						</h3>
-						<button style="background-color: rgba(16,98,153,0.95);" id="audition" class="btn btn-lg">Read about the Audition Process</button>
-						<p id="paragraph" class="event-description container" style="text-align:left;display: none;">
-							<br><span style="color: rgba(16,98,153,0.95)">First Round: General Auditions</span><br><br>
-
-							<span style="color: rgba(16,98,153,0.95)">Vocalization:</span> to warm you up and test your range.<br>
-							<span style="color: rgba(16,98,153,0.95)">Tonal Memory:</span> we play a series of notes, you sing them back to us.<br>
-							<span style="color: rgba(16,98,153,0.95)">Your Solo:</span> your chance to show off your voice. You may choose any song from the Jazz/Pop/R&amp;B genre to show us you can be Divas and Rock Stars! We will listen to a verse/refrain of you a cappella, and written music is not necessary to bring. We just ask that you try not to sing Disney, Classical, or Musical Theater selections since these aren't the type of music we sing, and don't give us a good idea of how you will sound in our group.<br>
-							<span style="color: rgba(16,98,153,0.95)">Sightreading:</span> quick and painless - we promise!<br><br>
-							<span style="color: rgba(16,98,153,0.95)">Second Round (Callbacks):</span><br><br>
-
-							We already know you can sing, so callbacks are all about discovering how well your voice blends with the group. They are run much like a normal rehearsal: we will warm up with you, teach you parts of some songs in our current repertoire, and rock out a cappella style!
+						<p id="paragraph" class="event-description container" style="">
+							After hearing over 150 auditions, we are so pleased to welcome our newest members!
+						<br><a class="newMembers" name ="anderson" href="#">Kate Anderson</a>
+						<br><a class="newMembers" name="markham" href="#">Demetrius Markham</a>
+						<br><a class="newMembers" name="sharp" href="#">Maddy Sharp</a>
+						<br><a class="newMembers" name="sherman" href="#">Justin Sherman</a>
 						</p>
 					</div>
 				</div>
@@ -91,8 +91,26 @@
 					<h1 id="meet" class="col-xs-12">Meet the Lyres!</h1>
 					<hr class="member-break">
 				</div>
+
 				<div class="row">
-					<div class="container">
+					<div class="container" id="anderson">
+						<div class="col-xs-6 col-sm-8" style="text-align: right;">
+							<h3 class="member-name"> Kate Anderson </h3>
+							<div class="member-major">
+								<small>Soprano</small> <small> | </small> <small> PPE '20 </small>
+							</div>
+							<p class="member-description col-hidden-xs">
+								Kate is no stranger to snow: she made her way to Ann Arbor from Colorado.
+							</p>
+						</div>
+						<div class="col-xs-6 col-sm-4" >
+							<img src="assets/images/anderson.jpg" class="member-icons"/>
+						</div>
+					</div>
+				</div>
+				<hr class="member-break">
+				<div class="row">
+					<div class="container" id="bain">
 						<div class="col-xs-6 col-sm-4">
 							<img src="assets/images/bain.jpg" class="member-icons"/>
 						</div>
@@ -109,7 +127,7 @@
 				</div>
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
+					<div class="container" id="callahan">
 						<div class="col-xs-6 col-sm-8" style="text-align: right;">
 							<h3 class="member-name"> Andrew Callahan </h3>
 							<div class="member-major">
@@ -124,25 +142,6 @@
 						</div>
 					</div>
 				</div>
-				<!--
-				<hr class="member-break">
-				<div class="row">
-					<div class="container">
-						<div class="col-xs-6 col-sm-4" >
-							<img src="assets/images/christensen.jpg" class="member-icons"/>
-						</div>
-						<div class="col-xs-6 col-sm-8" style="text-align: left;">
-							<h3 class="member-name"> Kelly Christensen </h3>
-							<div class="member-major">
-								<small>Soprano</small> <small> | </small> <small> English '16</small>
-							</div>
-							<p class="member-description col-hidden-xs">
-								This is Kelly's fourth and final year as a Lyre, and she is honored to serve as President over their domain for the 2015-2016 school year. HAILing all the way from Orange County, California, Kelly found her family away from home in this group. She is self-proclaimed group mom, so if you ever need a snack or an extra jacket, Kelly will have an assortment to choose from. In all seriousness, she loves these people, and is so thankful to wear the lyre for one more year.
-							</p>
-						</div>
-					</div>
-				</div>
-				-->
 				<hr class="member-break">
 				<div class="row">
 					<div class="container">
@@ -162,7 +161,7 @@
 				</div>
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
+					<div class="container" id="denton">
 						<div class="col-xs-6 col-sm-8" style="text-align: right;">
 							<h3 class="member-name"> Sawyer Denton </h3>
 							<div class="member-major">
@@ -179,7 +178,7 @@
 				</div>
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
+					<div class="container" id="funsten">
 						<div class="col-xs-6 col-sm-4">
 							<img src="assets/images/funsten.jpg" class="member-icons"/>
 						</div>
@@ -196,7 +195,7 @@
 				</div>
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
+					<div class="container" id="kolm">
 						<div class="col-xs-6 col-sm-8" style="text-align: right;">
 							<h3 class="member-name"> Evan Kolm </h3>
 							<div class="member-major">
@@ -213,11 +212,25 @@
 				</div>
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
-						<div class="col-xs-6 col-sm-4">
-							<img src="assets/images/mckay.jpg" class="member-icons"/>
+					<div class="container" id="markham">
+						<div class="col-xs-6 col-sm-4" >
+							<img src="assets/images/markham.jpg" class="member-icons"/>
 						</div>
 						<div class="col-xs-6 col-sm-8" style="text-align: left;">
+							<h3 class="member-name"> Demetrius Markham </h3>
+							<div class="member-major">
+								<small>Bass</small> <small> | </small> <small> Art '20</small>
+							</div>
+							<p class="member-description col-hidden-xs">
+								Look for Demetrius out on the field on gamedays: not at Quarterback but with the Cheer Team!
+							</p>
+						</div>
+					</div>
+				</div>
+				<hr class="member-break">
+				<div class="row">
+					<div class="container" id='mckay'>
+						<div class="col-xs-6 col-sm-8" style="text-align: right;">
 							<h3 class="member-name"> Jordan McKay </h3>
 							<div class="member-major">
 								<small>Tenor/Vocal Percussion</small> <small> | </small> <small> Complex Systems '17</small>
@@ -226,12 +239,18 @@
 								Jordan plays both real drums and mouth drums.
 							</p>
 						</div>
+						<div class="col-xs-6 col-sm-4">
+							<img src="assets/images/mckay.jpg" class="member-icons"/>
+						</div>
 					</div>
 				</div>
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
-						<div class="col-xs-6 col-sm-8" style="text-align: right;">
+					<div class="container" id='napolitano'>
+						<div class="col-xs-6 col-sm-4">
+							<img src="assets/images/napolitano.jpg" class="member-icons"/>
+						</div>
+						<div class="col-xs-6 col-sm-8" style="text-align: left;">
 							<h3 class="member-name"> Francesca Napolitano </h3>
 							<div class="member-major">
 								<small>Soprano</small> <small> | </small> <small> Voice Performance '19</small>
@@ -240,18 +259,12 @@
 								Francesca is a freshman and is very excited to be in her first year as a Lyre! Born and raised in Boston, she finds Midwestern accents unsettling but will eventually get over it. In her spare time, Francesca can be found studying lyrics to Kesha songs, singing high notes against her will, and perfecting her Alanis Morissette impression.
 							</p>
 						</div>
-						<div class="col-xs-6 col-sm-4">
-							<img src="assets/images/napolitano.jpg" class="member-icons"/>
-						</div>
 					</div>
 				</div>
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
-						<div class="col-xs-6 col-sm-4">
-							<img src="assets/images/polinsky.jpg" class="member-icons"/>
-						</div>
-						<div class="col-xs-6 col-sm-8" style="text-align: left;">
+					<div class="container" id='polinsky'>
+						<div class="col-xs-6 col-sm-8" style="text-align: right;">
 							<h3 class="member-name"> Becca Polinsky </h3>
 							<div class="member-major">
 								<small>Alto</small> <small> | </small> <small> Spanish &amp; International Studies '19</small>
@@ -260,12 +273,18 @@
 								Becca only auditioned for the Compulsive Lyres.
 							</p>
 						</div>
+						<div class="col-xs-6 col-sm-4">
+							<img src="assets/images/polinsky.jpg" class="member-icons"/>
+						</div>
 					</div>
 				</div>
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
-						<div class="col-xs-6 col-sm-8" style="text-align: right;">
+					<div class="container" id='prenzler'>
+						<div class="col-xs-6 col-sm-4">
+							<img src="assets/images/prenzler.JPG" class="member-icons"/>
+						</div>
+						<div class="col-xs-6 col-sm-8" style="text-align: left;">
 							<h3 class="member-name"> Anna Prenzler </h3>
 							<div class="member-major">
 								<small>Soprano</small> <small> | </small> <small> Business '17</small>
@@ -274,35 +293,12 @@
 								Hailing from Bloomington, Illinois, Anna is a junior studying business with a minor in writing and is #blessed to be back with the Lyres for a second year. Outside of Lyres she works as a tour guide and is a part of Alpha Chi Omega, but most importantly, she brings the sass of her long lost twin Poot Prenzler to the group dynamic.
 							</p>
 						</div>
-						<div class="col-xs-6 col-sm-4">
-							<img src="assets/images/prenzler.JPG" class="member-icons"/>
-						</div>
 					</div>
 				</div>
-				<!--<hr class="member-break">
-				<div class="row">
-					<div class="container">
-						<div class="col-xs-6 col-sm-8" style="text-align: right;">
-							<h3 class="member-name"> Alex Quinlan </h3>
-							<div class="member-major">
-								<small>Bass</small> <small> | </small> <small> Computer Science '16</small>
-							</div>
-							<p class="member-description col-hidden-xs">
-								Alex made this site instead of doing his homework. 
-							</p>
-						</div>
-						<div class="col-xs-6 col-sm-4">
-							<img src="assets/images/quinlan.jpg" class="member-icons"/>
-						</div>
-					</div>
-				</div>-->
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
-						<div class="col-xs-6 col-sm-4">
-							<img src="assets/images/sefton.jpg" class="member-icons"/>
-						</div>
-						<div class="col-xs-6 col-sm-8" style="text-align: left;">
+					<div class="container" id='sefton'>
+						<div class="col-xs-6 col-sm-8" style="text-align: right;">
 							<h3 class="member-name"> Billy Sefton </h3>
 							<div class="member-major">
 								<small>Tenor</small> <small> | </small> <small> Choral Education '17</small>
@@ -311,12 +307,52 @@
 								Billy 'Manbun' Sefton is Music Director this year.
 							</p>
 						</div>
+						<div class="col-xs-6 col-sm-4">
+							<img src="assets/images/sefton.jpg" class="member-icons"/>
+						</div>
 					</div>
 				</div>
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
+					<div class="container" id="sharp">
+						<div class="col-xs-6 col-sm-4" >
+							<img src="assets/images/sharp.jpg" class="member-icons"/>
+						</div>
+						<div class="col-xs-6 col-sm-8" style="text-align: left;">
+							<h3 class="member-name"> Maddy Sharp </h3>
+							<div class="member-major">
+								<small>Soprano</small> <small> | </small> <small> Undecided '20</small>
+							</div>
+							<p class="member-description col-hidden-xs">
+								Maddy is the newest link between the Lyres and the Greek community.
+							</p>
+						</div>
+					</div>
+				</div>
+				<hr class="member-break">
+				<div class="row">
+					<div class="container" id="sherman">
 						<div class="col-xs-6 col-sm-8" style="text-align: right;">
+							<h3 class="member-name"> Justin Sherman </h3>
+							<div class="member-major">
+								<small>Baritone</small> <small> | </small> <small> Undecided '20</small>
+							</div>
+							<p class="member-description col-hidden-xs">
+								Justin is close to edging out Sawyer as the best dancer in the group.
+							</p>
+						</div>
+						<div class="col-xs-6 col-sm-4" >
+							<img src="assets/images/sherman.jpg" class="member-icons"/>
+						</div>
+					</div>
+				</div>
+				<hr class="member-break">
+				<div class="row">
+					<div class="container" id='shuman'>
+						<div class="col-xs-6 col-sm-4">
+							<img src="assets/images/shuman.jpg" class="member-icons"/>
+						</div>
+						<div class="col-xs-6 col-sm-8" style="text-align: left;">
 							<h3 class="member-name"> Hannah Shuman </h3>
 							<div class="member-major">
 								<small>Alto</small> <small> | </small> <small> Biomolecular Science &amp; German '18</small>
@@ -325,18 +361,12 @@
 								After successfully surviving her freshman year, Hannah is excited for another two semesters of fun and games with the Lyres. When she isn't lost, Hannah is studying, playing the piano, writing songs, or running. She can't wait for another year of singing, not singing, learning choreo, and failing at the choreo. Lyre up!
 							</p>
 						</div>
-						<div class="col-xs-6 col-sm-4">
-							<img src="assets/images/shuman.jpg" class="member-icons"/>
-						</div>
 					</div>
 				</div>
 				<hr class="member-break">
 				<div class="row">
-					<div class="container">
-						<div class="col-xs-6 col-sm-4">
-							<img src="assets/images/sibour.jpg" class="member-icons"/>
-						</div>
-						<div class="col-xs-6 col-sm-8" style="text-align: left;">
+					<div class="container" id='sibour'>
+						<div class="col-xs-6 col-sm-8" style="text-align: right;">
 							<h3 class="member-name"> Trevor de Sibour </h3>
 							<div class="member-major">
 								<small>Tenor</small> <small> | </small> <small> Biomolecular Science '18</small>
@@ -345,43 +375,12 @@
 								Trevor is incredibly excited for his second year of Lyres! As a sophomore, he is still trying to figure out the whole pre-med thing and considers Grey's Anatomy a valuable asset to his educational enrichment. In his free time, you can find him ~sexually~ experimenting with various spice levels at No Thai, self-consciously sleeping in the UGLi, or aggressively listening to Christmas music.
 							</p>
 						</div>
-					</div>
-				</div>
-				<!--<hr class="member-break">
-				<div class="row">
-					<div class="container">
-						<div class="col-xs-6 col-sm-8" style="text-align: right;">
-							<h3 class="member-name"> Brendan Stafford </h3>
-							<div class="member-major">
-								<small>Bass</small> <small> | </small> <small> Political Science '16</small>
-							</div>
-							<p class="member-description col-hidden-xs">
-								Brendan already has a job offer so he's pretty much checked out. 
-							</p>
-						</div>
 						<div class="col-xs-6 col-sm-4">
-							<img src="assets/images/stafford.jpg" class="member-icons"/>
+							<img src="assets/images/sibour.jpg" class="member-icons"/>
 						</div>
 					</div>
 				</div>
-				<hr class="member-break">
-				<div class="row">
-					<div class="container">
-						<div class="col-xs-6 col-sm-4">
-							<img src="assets/images/thalhamer.jpg" class="member-icons"/>
-						</div>
-						<div class="col-xs-6 col-sm-8" style="text-align: left;">
-							<h3 class="member-name"> Addison Thalhamer </h3>
-							<div class="member-major">
-								<small>Baritone</small> <small> | </small> <small> Mechanical Engineering '16</small>
-							</div>
-							<p class="member-description col-hidden-xs">
-								Addison can't decide where he loves to spend time more, with the Men's Glee Club or with the Lyres.
-							</p>
-						</div>
-					</div>
-				</div>-->
-				<hr style="visibility: hidden;">				
+				<hr style="visibility: hidden;">
 			</div>
 			<div class="main-container">
 				<div id="subtitle-container">
@@ -390,16 +389,16 @@
 					</h2>
 					<div id="contact-container" style="text-align:center;" class="col-xs-12">
 						<div id="envelope-container" class="col-xs-12">
-							<a id="facebook" href="https://www.facebook.com/umlyres/?fref=ts" target="blank" class="contact-icons" >
+							<a id="facebook" title="Like us on Facebook!" href="https://www.facebook.com/umlyres/?fref=ts" target="blank" class="contact-icons" >
 								<span class="icon-facebook-f"></span>
 							</a>
-							<a id="envelope" title="Email our Business Manager, Trevor!" href="mailto:detrevor@umich.edu" class="contact-icons" >
+							<a id="envelope" title="Email our President, Jenna!" href="mailto:jfunsten@umich.edu" class="contact-icons" >
 								<span class="icon-envelope-o"></span>
 							</a>
-							<a id="youtube" href="https://www.youtube.com/channel/UCOKEAh1pWfEEJlPpndxQk0A" target="blank" class="contact-icons" >
+							<a id="youtube" title="Watch our concerts on YouTube!" href="https://www.youtube.com/channel/UCOKEAh1pWfEEJlPpndxQk0A" target="blank" class="contact-icons" >
 								<span class="icon-youtube-play"></span>
 							</a>
-							<a id="instagram" href="https://www.instagram.com/compulsivelyres/" target="blank" class="contact-icons" >
+							<a id="instagram" title="Follow us on Instagram!" href="https://www.instagram.com/compulsivelyres/" target="blank" class="contact-icons" >
 								<span class="icon-instagram"></span>
 							</a>
 						</div>
@@ -409,7 +408,6 @@
 		</div>
 	</div>
 </body>
-
 
 <!-- EMPTY MEMBER INFO -->
 
@@ -448,6 +446,128 @@
 		</div>
 		<div class="col-xs-6 col-sm-4" >
 			<img src="assets/images/*.jpg" class="member-icons"/>
+		</div>
+	</div>
+</div>
+-->
+
+<!-- Audition Info -->
+<!--
+<div id="news-container" style="text-align: center;" class="container-fluid">
+	<div class='row' style='text-align: center;'>
+		<h1 id='meet' style=" font-family: 'Farsan'" class='col-xs-12'>Upcoming Events</h1>
+		<hr class='member-break'/>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h3 id='meet' class="member-name" style="margin-top: 0;font-family:'Farsan'"> Join the Compulsive Lyres! </h3>
+			<hr style="visibility: hidden;">
+		</div>
+		<div class="col-xs-12">
+			<h3 class="member-major" style='margin-top: 0;'>
+				4:30pm-12am | Sept 15<sup>th</sup>-16<sup>th</sup> | Crofoot Room, Michigan Union
+			</h3>
+			<button style="background-color: rgba(16,98,153,0.95);" id="audition" class="btn btn-lg">Read about the Audition Process</button>
+			<p id="paragraph" class="event-description container" style="text-align:left;display: none;">
+				<br><span style="color: rgba(16,98,153,0.95)">First Round: General Auditions</span><br><br>
+
+				<span style="color: rgba(16,98,153,0.95)">Vocalization:</span> to warm you up and test your range.<br>
+				<span style="color: rgba(16,98,153,0.95)">Tonal Memory:</span> we play a series of notes, you sing them back to us.<br>
+				<span style="color: rgba(16,98,153,0.95)">Your Solo:</span> your chance to show off your voice. You may choose any song from the Jazz/Pop/R&amp;B genre to show us you can be Divas and Rock Stars! We will listen to a verse/refrain of you a cappella, and written music is not necessary to bring. We just ask that you try not to sing Disney, Classical, or Musical Theater selections since these aren't the type of music we sing, and don't give us a good idea of how you will sound in our group.<br>
+				<span style="color: rgba(16,98,153,0.95)">Sightreading:</span> quick and painless - we promise!<br><br>
+				<span style="color: rgba(16,98,153,0.95)">Second Round (Callbacks):</span><br><br>
+
+				We already know you can sing, so callbacks are all about discovering how well your voice blends with the group. They are run much like a normal rehearsal: we will warm up with you, teach you parts of some songs in our current repertoire, and rock out a cappella style!
+			</p>
+		</div>
+	</div>
+	<hr style='visibility: hidden;'>
+</div>
+-->
+
+
+
+<!-- ALUMNI -->
+
+<!-- Kelly Christensen -->
+<!--
+<hr class="member-break">
+<div class="row">
+	<div class="container">
+		<div class="col-xs-6 col-sm-4" >
+			<img src="assets/images/alumni/christensen.jpg" class="member-icons"/>
+		</div>
+		<div class="col-xs-6 col-sm-8" style="text-align: left;">
+			<h3 class="member-name"> Kelly Christensen </h3>
+			<div class="member-major">
+				<small>Soprano</small> <small> | </small> <small> English '16</small>
+			</div>
+			<p class="member-description col-hidden-xs">
+				This is Kelly's fourth and final year as a Lyre, and she is honored to serve as President over their domain for the 2015-2016 school year. HAILing all the way from Orange County, California, Kelly found her family away from home in this group. She is self-proclaimed group mom, so if you ever need a snack or an extra jacket, Kelly will have an assortment to choose from. In all seriousness, she loves these people, and is so thankful to wear the lyre for one more year.
+			</p>
+		</div>
+	</div>
+</div>
+-->
+
+<!-- Alex Quinlan -->
+<!--
+<hr class="member-break">
+<div class="row">
+	<div class="container">
+		<div class="col-xs-6 col-sm-8" style="text-align: right;">
+			<h3 class="member-name"> Alex Quinlan </h3>
+			<div class="member-major">
+				<small>Bass</small> <small> | </small> <small> Computer Science '16</small>
+			</div>
+			<p class="member-description col-hidden-xs">
+				Alex made this site instead of doing his homework. 
+			</p>
+		</div>
+		<div class="col-xs-6 col-sm-4">
+			<img src="assets/images/alumni/quinlan.jpg" class="member-icons"/>
+		</div>
+	</div>
+</div>
+-->
+
+<!-- Brendan Stafford -->
+<!--
+<hr class="member-break">
+<div class="row">
+	<div class="container">
+		<div class="col-xs-6 col-sm-8" style="text-align: right;">
+			<h3 class="member-name"> Brendan Stafford </h3>
+			<div class="member-major">
+				<small>Bass</small> <small> | </small> <small> Political Science '16</small>
+			</div>
+			<p class="member-description col-hidden-xs">
+				Brendan already has a job offer so he's pretty much checked out. 
+			</p>
+		</div>
+		<div class="col-xs-6 col-sm-4">
+			<img src="assets/images/alumni/stafford.jpg" class="member-icons"/>
+		</div>
+	</div>
+</div>
+-->
+
+<!-- Addison Thalhamer -->
+<!--
+<hr class="member-break">
+<div class="row">
+	<div class="container">
+		<div class="col-xs-6 col-sm-4">
+			<img src="assets/images/alumni/thalhamer.jpg" class="member-icons"/>
+		</div>
+		<div class="col-xs-6 col-sm-8" style="text-align: left;">
+			<h3 class="member-name"> Addison Thalhamer </h3>
+			<div class="member-major">
+				<small>Baritone</small> <small> | </small> <small> Mechanical Engineering '16</small>
+			</div>
+			<p class="member-description col-hidden-xs">
+				Addison can't decide where he loves to spend time more, with the Men's Glee Club or with the Lyres.
+			</p>
 		</div>
 	</div>
 </div>
